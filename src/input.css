@@ -3,3 +3,8 @@
 @tailwind components;
 
 @tailwind utilities;
+
+.phone {
+  max-width: 390px;
+  min-height: 844px;
+}

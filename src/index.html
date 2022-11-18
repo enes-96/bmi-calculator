@@ -8,156 +8,150 @@
     <script src="/src/script.js" defer></script>
     <title>BMI - CALCULATOR</title>
   </head>
-  <body class="bg-sky-900 text-white">
-    <header class="flex justify-between items-center p-6 bg-sky-700">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="w-10 h-10"
+  <body class="bg-white text-white flex justify-center items-center h-screen">
+    <div
+      class="phone relative sm:rounded-3xl sm:border-solid sm:border-black sm:border-8 bg-sky-900 text-white overflow-hidden"
+    >
+      <header class="p-6 bg-sky-700">
+        <h1 class="text-2xl text-center">BMI CALCULATOR</h1>
+      </header>
+      <div class="flex justify-center py-10 px-6 gap-6">
+        <div
+          class="h-44 w-44 bg-sky-600 grid place-content-center rounded-xl gap-4"
+          id="male"
+        >
+          <img class="h-24 w-24" src="/icons/mars.png" alt="" />
+          <p class="text-center">Male</p>
+        </div>
+        <div
+          class="h-44 w-44 bg-sky-600 grid place-content-center rounded-xl gap-4"
+          id="female"
+        >
+          <img class="h-24 w-24" src="/icons/femenine.png" alt="" />
+          <p class="text-center">Female</p>
+        </div>
+      </div>
+      <div
+        class="bg-sky-600 flex flex-col text-center p-6 mx-6 mb-10 gap-4 rounded-xl"
       >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        <h4 class="text-xl">HEIGHT</h4>
+        <label
+          for="default-range"
+          class="text-4xl block mb-2 font-medium dark:text-white"
+          id="height"
+          >170</label
+        >
+        <input
+          id="height-slider"
+          type="range"
+          max="220"
+          min="140"
+          value="170"
+          class="w-full h-2 bg-gray-200 rounded-xl appearance-none cursor-pointer dark:bg-gray-700"
         />
-      </svg>
-      <h1 class="text-2xl">BMI CALCULATOR</h1>
-    </header>
-    <div class="flex justify-center py-10 px-6 gap-6">
-      <div
-        class="h-44 w-44 bg-sky-600 grid place-content-center rounded-xl gap-4"
-        id="male"
-      >
-        <img class="h-24 w-24" src="/icons/mars.png" alt="" />
-        <p class="text-center">Male</p>
       </div>
-      <div
-        class="h-44 w-44 bg-sky-600 grid place-content-center rounded-xl gap-4"
-        id="female"
-      >
-        <img class="h-24 w-24" src="/icons/femenine.png" alt="" />
-        <p class="text-center">Female</p>
-      </div>
-    </div>
-    <div
-      class="bg-sky-600 flex flex-col text-center p-6 mx-6 mb-10 gap-4 rounded-xl"
-    >
-      <h4 class="text-xl">HEIGHT</h4>
-      <label
-        for="default-range"
-        class="text-4xl block mb-2 font-medium dark:text-white"
-        id="height"
-        >170</label
-      >
-      <input
-        id="height-slider"
-        type="range"
-        max="220"
-        min="140"
-        value="170"
-        class="w-full h-2 bg-gray-200 rounded-xl appearance-none cursor-pointer dark:bg-gray-700"
-      />
-    </div>
-    <div class="flex justify-center gap-6 mb-6">
-      <div class="h-40 w-40 bg-sky-600 rounded-xl grid place-items-center p-4">
-        <h4 class="text-xl">WEIGHT</h4>
-        <label
-          for="weight"
-          id="weight"
-          class="text-4xl block mb-2 font-medium dark:text-white"
-          >74</label
+      <div class="flex justify-center gap-6 mb-6">
+        <div
+          class="h-40 w-40 bg-sky-600 rounded-xl grid place-items-center p-4"
         >
-        <div class="flex gap-6">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-8 h-8 cursor-pointer"
-            id="weight-plus"
+          <h4 class="text-xl">WEIGHT</h4>
+          <label
+            for="weight"
+            id="weight"
+            class="text-4xl block mb-2 font-medium dark:text-white"
+            >74</label
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 4.5v15m7.5-7.5h-15"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-8 h-8 cursor-pointer"
-            id="weight-minus"
+          <div class="flex gap-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8 cursor-pointer"
+              id="weight-plus"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 4.5v15m7.5-7.5h-15"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8 cursor-pointer"
+              id="weight-minus"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 12h-15"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          class="h-40 w-40 bg-sky-600 rounded-xl grid place-items-center p-4"
+        >
+          <h4 class="text-xl">AGE</h4>
+          <label
+            id="age"
+            for="age"
+            class="text-4xl block mb-2 font-medium dark:text-white"
+            >22</label
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 12h-15"
-            />
-          </svg>
+          <div class="flex gap-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8 cursor-pointer"
+              id="age-plus"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 4.5v15m7.5-7.5h-15"
+              />
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-8 h-8 cursor-pointer"
+              id="age-minus"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19.5 12h-15"
+              />
+            </svg>
+          </div>
         </div>
       </div>
-      <div class="h-40 w-40 bg-sky-600 rounded-xl grid place-items-center p-4">
-        <h4 class="text-xl">AGE</h4>
-        <label
-          id="age"
-          for="age"
-          class="text-4xl block mb-2 font-medium dark:text-white"
-          >22</label
-        >
-        <div class="flex gap-6">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-8 h-8 cursor-pointer"
-            id="age-plus"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 4.5v15m7.5-7.5h-15"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-8 h-8 cursor-pointer"
-            id="age-minus"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 12h-15"
-            />
-          </svg>
-        </div>
+      <button
+        class="calc-btn w-full p-6 bg-sky-200 text-sky-900 hover:bg-sky-600 mt-10"
+      >
+        CALCULATE
+      </button>
+      <div
+        class="modal hidden z-20 h-80 w-80 bg-sky-900 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl"
+      >
+        <h2 id="result" class="text-center text-4xl p-6"></h2>
+        <p id="description" class="text-center text-2xl p-6"></p>
       </div>
+      <div
+        class="overlay hidden z-10 bg-slate-400 bg-opacity-50 absolute top-0 right-0 bottom-0 left-0"
+      ></div>
     </div>
-    <button
-      class="calc-btn w-full bottom-0 absolute p-6 bg-sky-200 text-sky-900 hover:bg-sky-600"
-    >
-      CALCULATE
-    </button>
-    <div
-      class="modal hidden z-20 h-80 w-80 bg-sky-900 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl"
-    >
-      <h2 id="result" class="text-center text-4xl p-6"></h2>
-      <p id="description" class="text-center text-2xl p-6"></p>
-    </div>
-    <div
-      class="overlay hidden z-10 bg-slate-400 bg-opacity-50 absolute top-0 right-0 bottom-0 left-0"
-    ></div>
   </body>
 </html>
