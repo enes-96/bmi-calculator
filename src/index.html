@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/dist/output.css" />
+    <script src="/src/script.js" defer></script>
+    <title>BMI - CALCULATOR</title>
+  </head>
+  <body class="bg-slate-500 text-white">
+    <header class="bg-rose-200 p-4">
+      <h1 class="text-2xl text-center font-bold">BMI CALCULATOR</h1>
+    </header>
+    <div class="flex justify-center p-4 gap-4">
+      <div
+        class="h-44 w-44 bg-slate-400 grid place-content-center rounded-xl gap-4"
+        id="male"
+      >
+        <img class="h-24 w-24" src="/icons/mars.png" alt="" />
+        <p class="text-center">Male</p>
+      </div>
+      <div
+        class="h-44 w-44 bg-slate-400 grid place-content-center rounded-xl gap-4"
+        id="female"
+      >
+        <img class="h-24 w-24" src="/icons/femenine.png" alt="" />
+        <p class="text-center">Female</p>
+      </div>
+    </div>
+    <div class="m-auto mb-4 mx-4 p-4 bg-slate-400 text-center rounded-xl">
+      <h4 class="text-xl">HEIGHT</h4>
+      <label
+        for="default-range"
+        class="text-4xl block font-medium dark:text-white"
+        id="height"
+        >170</label
+      >
+      <input
+        id="height-slider"
+        type="range"
+        max="220"
+        min="140"
+        value="170"
+        class="h-2 bg-gray-200 rounded-xl appearance-none cursor-pointer dark:bg-gray-700 w-full"
+      />
+    </div>
+    <div class="flex justify-center pb-4 gap-4">
+      <div class="h-40 w-40 bg-slate-400 rounded-xl grid place-items-center">
+        <h4 class="text-xl">WEIGHT</h4>
+        <label
+          for="weight"
+          id="weight"
+          class="text-4xl block font-medium dark:text-white"
+          >74</label
+        >
+        <div class="flex">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8 cursor-pointer"
+            id="weight-plus"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 4.5v15m7.5-7.5h-15"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8 cursor-pointer"
+            id="weight-minus"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 12h-15"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="h-40 w-40 bg-slate-400 rounded-xl grid place-items-center">
+        <h4 class="text-xl">AGE</h4>
+        <label
+          id="age"
+          for="age"
+          class="text-4xl block font-medium dark:text-white"
+          >22</label
+        >
+        <div class="flex">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8 cursor-pointer"
+            id="age-plus"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 4.5v15m7.5-7.5h-15"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8 cursor-pointer"
+            id="age-minus"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 12h-15"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <button
+      class="calc-btn bg-rose-300 text-white hover:bg-rose-400 w-full text-2xl py-2 absolute bottom-0"
+    >
+      CALCULATE
+    </button>
+    <div
+      class="modal hidden z-20 h-80 w-80 bg-rose-300 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-xl"
+    >
+      <h2 id="result" class="text-center text-4xl p-6"></h2>
+      <p id="description" class="text-center text-2xl p-6"></p>
+    </div>
+    <div
+      class="overlay hidden z-10 bg-slate-400 bg-opacity-50 absolute top-0 right-0 bottom-0 left-0"
+    ></div>
+  </body>
+</html>
