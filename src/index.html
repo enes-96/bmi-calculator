@@ -9,7 +9,7 @@
     <title>BMI - CALCULATOR</title>
   </head>
   <body class="bg-slate-500 text-white">
-    <header class="bg-rose-200 p-4">
+    <header class="bg-rose-200 p-4" id="header">
       <h1 class="text-2xl text-center">BMI CALCULATOR</h1>
     </header>
     <div class="flex justify-center p-4 gap-4">
@@ -28,7 +28,10 @@
         <p class="text-center">Female</p>
       </div>
     </div>
-    <div class="m-auto mb-4 mx-4 p-4 bg-slate-400 text-center rounded-xl">
+    <div
+      id="slider-container"
+      class="m-auto mb-4 mx-4 p-4 bg-slate-400 text-center rounded-xl"
+    >
       <h4 class="text-xl">HEIGHT</h4>
       <label
         for="default-range"
@@ -55,36 +58,8 @@
           >74</label
         >
         <div class="flex">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-8 h-8 cursor-pointer"
-            id="weight-plus"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 4.5v15m7.5-7.5h-15"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-8 h-8 cursor-pointer"
-            id="weight-minus"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 12h-15"
-            />
-          </svg>
+          <h2 id="weight-plus" class="text-4xl">+</h2>
+          <h2 id="weight-minus" class="text-4xl">&#8722;</h2>
         </div>
       </div>
       <div class="h-40 w-40 bg-slate-400 rounded-xl grid place-items-center">
@@ -96,36 +71,8 @@
           >22</label
         >
         <div class="flex">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-8 h-8 cursor-pointer"
-            id="age-plus"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 4.5v15m7.5-7.5h-15"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-8 h-8 cursor-pointer"
-            id="age-minus"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 12h-15"
-            />
-          </svg>
+          <h2 id="age-plus" class="text-4xl">+</h2>
+          <h2 id="age-minus" class="text-4xl">&#8722;</h2>
         </div>
       </div>
     </div>
@@ -143,5 +90,6 @@
     <div
       class="overlay hidden z-10 bg-slate-400 bg-opacity-50 absolute top-0 right-0 bottom-0 left-0"
     ></div>
+    <div id="nightModeBtn" class="absolute top-6 left-6">🌑</div>
   </body>
 </html>
