@@ -103,30 +103,3 @@ overlay.addEventListener("click", () => {
   overlay.classList.add("hidden");
   modal.classList.add("hidden");
 });
-
-const nightModeBtn = document.querySelector("#nightModeBtn");
-
-nightModeBtn.style.cursor = "pointer";
-
-nightModeBtn.addEventListener("click", () => {
-  document.body.style.backgroundColor = "black";
-  const header = document.querySelector("#header");
-  header.style.backgroundColor = "black";
-  header.style.color = "white";
-  genderMale.style.backgroundColor = "black";
-  genderMale.style.border = "white 2px solid";
-  genderFemale.style.backgroundColor = "black";
-  genderFemale.style.border = "white 2px solid";
-  const sliderContainer = document.querySelector("#slider-container");
-  sliderContainer.style.backgroundColor = "black";
-  sliderContainer.style.border = "2px solid white";
-  height.style.backgroundColor = "black";
-  age.parentElement.style.backgroundColor = "black";
-  age.parentElement.style.border = "white 2px solid";
-
-  weight.parentElement.style.backgroundColor = "black";
-  weight.parentElement.style.border = "white 2px solid";
-  calcBtn.style.backgroundColor = "white";
-  calcBtn.style.color = "black";
-  nightModeBtn.style.fill = "white";
-});
