@@ -22,15 +22,12 @@ genderFemale.addEventListener("click", () => {
 
 function genderSelect() {
   if (UserGender == "male") {
-    console.log("you are male1");
     genderMale.classList.add("bg-rose-400");
     genderFemale.classList.remove("bg-rose-400");
   } else if (UserGender == "female") {
-    console.log("you are female2");
     genderMale.classList.remove("bg-rose-400");
     genderFemale.classList.add("bg-rose-400");
   } else {
-    console.log("select gender");
   }
 }
 const heightSlider = document.querySelector("#height-slider");
